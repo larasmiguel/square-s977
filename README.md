@@ -1,4 +1,4 @@
-# Packing 977 unit squares — candidate upper bound
+# Packing 977 unit squares — computational reconstruction of a Göbel-type bound
 
 **Contributor: Miguel Lara (independent).**
 
@@ -6,7 +6,21 @@ Proposed construction: 441 unit squares in a compact central 21×21 diamond rota
 
 \[s(977)\le 17+21/\sqrt{2}\approx31.8492424049<32.\]
 
-This is a **candidate upper bound** submitted for independent review, not a claim of optimality or established priority over existing records.
+The bound is **not a newly discovered record**: it follows from Göbel's classical construction and an L-border extension. This repository documents Miguel Lara's separate 977-square geometric layout and its numerical verification. Independent external checking of this specific coordinate file is still welcome.
+
+## Historical context and attribution
+
+This 0°/45° central-diamond and axis-aligned corner packing is part of the **classical square-packing tradition pioneered by Frits Göbel (1979)**. It should **not** be presented as a new record or a novel upper bound. The same side-length bound follows from Göbel's published family (as documented by Erich Friedman):
+
+- With \((a,b)=(15,21)\), Göbel's formula yields \(2a^2+2a+b^2=921\) squares at side \(a+1+b/\sqrt2=16+21/\sqrt2\).
+- Adding a standard outer L-shaped border yields \(921+(2\lfloor 16+21/\sqrt2\rfloor+1)=982\) squares at side \(17+21/\sqrt2\).
+- Removing five squares gives a packing of 977 at the same side.
+
+This reasoning gives the **same upper bound** as the construction here, although the coordinates and staircase arrangement need not be identical. **Credit to Frits Göbel for the underlying classical method; credit to Miguel Lara for this particular computational reconstruction, coordinate data, code, visualization and documentation**, developed with AI assistance. No originality or best-known-record claim is made.
+
+**References:**
+- F. Göbel, “Geometrical Packing and Covering Problems,” *Mathematical Centre Tracts* 106 (1979), pp. 179–199: https://ir.cwi.nl/pub/12685/12685D.pdf
+- E. Friedman, “Packing Unit Squares in Squares: A Survey and New Results,” *Electronic Journal of Combinatorics*, Dynamic Survey DS7, Göbel construction and L-border discussion: https://www.combinatorics.org/files/Surveys/ds7/ds7v5-2009/ds7-2009.html
 
 ## Files
 
@@ -28,4 +42,4 @@ The checker reads the committed CSV; it never overwrites it. It uses floating-po
 
 ## Attribution and limitations
 
-Geometric investigation and candidate construction: Miguel Lara, assisted by OpenAI ChatGPT in numerical experimentation, code generation, debugging, proof drafting, and documentation. Independent third-party review and comprehensive prior-art comparison remain outstanding.
+Underlying Göbel-type packing method: Frits Göbel (1979). This specific layout, coordinates, numerical experimentation, code, and documentation: Miguel Lara, with OpenAI ChatGPT assistance. Independent third-party review of the specific construction remains outstanding.
